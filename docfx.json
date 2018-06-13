@@ -22,8 +22,32 @@
       },
       {
         "files": [
-          "articles/**.md",
-          "articles/**/toc.yml",
+          "vmchooser/**.md",
+          "vmchooser/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ]
+      },
+      {
+        "files": [
+          "diskchooser/**.md",
+          "diskchooser/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ]
+      },
+      {
+        "files": [
+          "bulkuploader/**.md",
+          "bulkuploader/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ]
+      },
+      {
+        "files": [
+          "vmoptimizer/**.md",
+          "vmoptimizer/**/toc.yml",
           "toc.yml",
           "*.md"
         ]

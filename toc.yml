@@ -1,5 +1,15 @@
-- name: Articles
-  href: articles/
-- name: Api Documentation
+- name: VMchooser
+  href: vmchooser/
+  homepage: vmchooser/index.md
+- name: DiskChooser
+  href: diskchooser/
+  homepage: diskchooser/index.md
+- name: BulkUploader
+  href: bulkuploader/
+  homepage: bulkuploader/index.md
+- name: VMoptimizer
+  href: vmoptimizer/
+  homepage: vmoptimizer/index.md
+- name: API
   href: api/
   homepage: api/index.md
