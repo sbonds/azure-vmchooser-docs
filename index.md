@@ -8,3 +8,10 @@ In the menu above you can find a section per VMchooser module ;
 4. **VMoptimizer** : When to go for a certain contract type (PAYG vs Reserved Instances)? Or what about the windows license, does it make sense to go PAYG or is it more interesting to buy a license?
 
 Do you have feedback about these docs? Feel free to file an issue (or do a pull request) at the [underpinning GitHub repository](https://github.com/kvaes/azure-vmchooser-docs/)!
+
+
+# Where does the data come from?
+The data is aggregated from various public sources. In essence the main source of truth is the [Azure Documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes) itself. 
+This information is consolidated into [reference data](https://github.com/kvaes/azure-vmchooser-database/tree/master/compute), and that data is combined with the pricing data on a daily basis to keep the database up-to-date.
+
+
