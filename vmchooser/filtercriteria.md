@@ -46,7 +46,7 @@
 
 | Filter Name | Unit | Description |
 | ------ | :--: | ----------: |
-| HANA Support | Yes/No/All |  |
+| HANA Support | Yes/No/All | Are HANA workloads certified? |
 | SAPS2T | [SAPS](https://www.sap.com/about/benchmark.html) | The minimum number of SAPS of the two tier benchmark |
 | SAPS3T | [SAPS](https://www.sap.com/about/benchmark.html) | The minimum number of SAPS of the three tier benchmark |
 
