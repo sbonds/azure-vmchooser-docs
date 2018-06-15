@@ -1,0 +1,391 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "vmchooser",
+    "version": "1.0.0"
+  },
+  "host": "vmchooserprodv2.azurewebsites.net",
+  "basePath": "/",
+  "schemes": [ "https" ],
+  "definitions": {
+    "VmSize": {
+      "type": "object",
+      "properties": {
+        "Name": {
+          "description": "The name of the VM Size",
+          "type": "string"
+        },
+        "Tier": {
+          "description": "The name of the Tier",
+          "type": "string"
+        },
+        "Region": {
+          "description": "The region linked to the pricing & availability of this VM Size",
+          "type": "string"
+        },
+        "Contract": {
+          "description": "The contract used for the pricing this VM Size",
+          "type": "string"
+        },
+        "ACU": {
+          "description": "Azure Compute Unit",
+          "type": "string"
+        },
+        "SSD": {
+          "description": "Is the VM SSD (Premium Storage) capable? [Yes/No]",
+          "type": "string"
+        },
+        "Cores": {
+          "description": "# of cores",
+          "type": "string"
+        },
+        "Memory": {
+          "description": "# of memory (in GB)",
+          "type": "string"
+        },
+        "Price": {
+          "description": "The price per hour for this VMsize expressed in the indicated currency",
+          "type": "string"
+        },
+        "Burstable": {
+          "description": "Is the VM burstable? [Yes/No]",
+          "type": "string"
+        },
+        "Isolated": {
+          "description": "Is the VM isolated? [Yes/No]",
+          "type": "string"
+        },
+        "Constrained": {
+          "description": "Is the VM capable of constraining cores? [Yes/No]",
+          "type": "string"
+        },
+        "OfferName": {
+          "description": "The OfferName as it's known for Azure CLI/PowerShell/RestAPI/...",
+          "type": "string"
+        },
+        "Hyperthreaded": {
+          "description": "Are the cores of this VM Hyperthreaded? [Yes/No]",
+          "type": "string"
+        },
+        "MaxNics": {
+          "description": "Maximum number of Network Interface Cards",
+          "type": "string"
+        },
+        "Bandwidth": {
+          "description": "Bandwidth (in Mbps)",
+          "type": "string"
+        },
+        "MaxDataDiskCount": {
+          "description": "Maximum number of Data Disks (not including the OS disk)",
+          "type": "string"
+        },
+        "MaxDataDiskSizeGB": {
+          "description": "Maximum amount of data possible (Max # disks * Max Disks Size)",
+          "type": "string"
+        },
+        "MaxDataDiskIops": {
+          "description": "Maximum amount of IOPS via standard disks",
+          "type": "string"
+        },
+        "MaxDataDiskThroughputMBs": {
+          "description": "Maximum throughput (in MB/s) via standard disks",
+          "type": "string"
+        },
+        "MaxVmIops": {
+          "description": "Maximum IOPS on VM Throttling level",
+          "type": "string"
+        },
+        "MaxVmThroughputMBs": {
+          "description": "Maximum throughput (in MB/s) on VM Throttling level",
+          "type": "string"
+        },
+        "price_USD": {
+          "description": "Price in US Dollar",
+          "type": "string"
+        },
+        "price_EUR": {
+          "description": "Price in Euro",
+          "type": "string"
+        },
+        "price_GBP": {
+          "description": "Price in GB Pound",
+          "type": "string"
+        },
+        "price_AUD": {
+          "description": "Price in Australian Dollar",
+          "type": "string"
+        },
+        "price_JPY": {
+          "description": "Price in Japanese Yen",
+          "type": "string"
+        },
+        "price_CAD": {
+          "description": "Price in Canadian Dollar",
+          "type": "string"
+        },
+        "price_DKK": {
+          "description": "Price in Danish Krones",
+          "type": "string"
+        },
+        "price_CHF": {
+          "description": "Price in Swiss Franks",
+          "type": "string"
+        },
+        "price_SEK": {
+          "description": "Price in Swedish Krones",
+          "type": "string"
+        },
+        "price_IDR": {
+          "description": "Price in Indonese Rupees",
+          "type": "string"
+        },
+        "price_INR": {
+          "description": "Price in Indian Rupees",
+          "type": "string"
+        },
+        "OperatingSystem": {
+          "description": "Operating System",
+          "type": "string"
+        },
+        "SAPHANA": {
+          "description": "Is the VM supported for SAP HANA? [Yes/No]",
+          "type": "string"
+        },
+        "SAPS2T": {
+          "description": "SAPS 2-tier benchmark",
+          "type": "string"
+        },
+        "SAPS3T": {
+          "description": "SAPS 3-tier benchmark",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "paths": {
+    "/api/CalcVmOptimizations": {
+      "get": {
+        "operationId": "CalcvmoptimizationsGet",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "CalcVmOptimizations",
+        "description": "Find the best VM T-Shirt Size for your given specifications",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/VmSize" }
+          }
+        },
+        "security": [ { "apikeyQuery": [] } ]
+      },
+      "post": {
+        "operationId": "CalcvmoptimizationsPost",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "CalcVmOptimizations",
+        "description": "Find the best VM T-Shirt Size for your given specifications",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/VmSize" }
+          }
+        },
+        "security": [ { "apikeyQuery": [] } ]
+      },
+      "options": {
+        "operationId": "CalcvmoptimizationsOptions",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "CalcVmOptimizations",
+        "description": "Find the best VM T-Shirt Size for your given specifications",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/VmSize" }
+          }
+        },
+        "security": [ { "apikeyQuery": [] } ]
+      }
+    },
+    "/api/GetDiskConfig": {
+      "get": {
+        "operationId": "GetdiskconfigGet",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "GetDiskConfig",
+        "description": "Find the best data disk configuration for your given specifications",
+        "responses": { "200": { "description": "OK" } },
+        "security": [ { "apikeyQuery": [] } ]
+      },
+      "post": {
+        "operationId": "GetdiskconfigPost",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "GetDiskConfig",
+        "description": "Find the best data disk configuration for your given specifications",
+        "responses": { "200": { "description": "OK" } },
+        "security": [ { "apikeyQuery": [] } ]
+      },
+      "options": {
+        "operationId": "GetdiskconfigOptions",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "GetDiskConfig",
+        "description": "Find the best data disk configuration for your given specifications",
+        "responses": { "200": { "description": "OK" } },
+        "security": [ { "apikeyQuery": [] } ]
+      }
+    },
+    "/api/GetRegions": {
+      "get": {
+        "operationId": "GetregionsGet",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "Run GetRegions",
+        "description": "This function will run GetRegions",
+        "responses": { "200": { "description": "OK" } },
+        "security": [ { "apikeyQuery": [] } ]
+      },
+      "post": {
+        "operationId": "GetregionsPost",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "Run GetRegions",
+        "description": "This function will run GetRegions",
+        "responses": { "200": { "description": "OK" } },
+        "security": [ { "apikeyQuery": [] } ]
+      }
+    },
+    "/api/GetVmDetail": {
+      "get": {
+        "operationId": "GetvmdetailGet",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "GetVmDetail",
+        "description": "Get the details for a specific VM T-Shirt size",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/VmSize" }
+          }
+        },
+        "security": [ { "apikeyQuery": [] } ]
+      },
+      "post": {
+        "operationId": "GetvmdetailPost",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "GetVmDetail",
+        "description": "Get the details for a specific VM T-Shirt size",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/VmSize" }
+          }
+        },
+        "security": [ { "apikeyQuery": [] } ]
+      },
+      "options": {
+        "operationId": "GetvmdetailOptions",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "GetVmDetail",
+        "description": "Get the details for a specific VM T-Shirt size",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/VmSize" }
+          }
+        },
+        "security": [ { "apikeyQuery": [] } ]
+      }
+    },
+    "/api/GetVmSize": {
+      "get": {
+        "operationId": "GetvmsizeGet",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "GetVmSize",
+        "description": "Find the best VM T-Shirt Size for your given specifications",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/VmSize" }
+          }
+        },
+        "security": [ { "apikeyQuery": [] } ]
+      },
+      "post": {
+        "operationId": "GetvmsizePost",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "GetVmSize",
+        "description": "Find the best VM T-Shirt Size for your given specifications",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/VmSize" }
+          }
+        },
+        "security": [ { "apikeyQuery": [] } ]
+      },
+      "options": {
+        "operationId": "GetvmsizeOptions",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "GetVmSize",
+        "description": "Find the best VM T-Shirt Size for your given specifications",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/VmSize" }
+          }
+        },
+        "security": [ { "apikeyQuery": [] } ]
+      }
+    },
+    "/api/GetVmSizes": {
+      "get": {
+        "operationId": "GetvmsizesGet",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "Run GetVmSizes",
+        "description": "This function will run GetVmSizes",
+        "responses": { "200": { "description": "OK" } },
+        "security": [ { "apikeyQuery": [] } ]
+      },
+      "post": {
+        "operationId": "GetvmsizesPost",
+        "produces": [ "application/json" ],
+        "consumes": [ "application/json" ],
+        "parameters": [],
+        "summary": "Run GetVmSizes",
+        "description": "This function will run GetVmSizes",
+        "responses": { "200": { "description": "OK" } },
+        "security": [ { "apikeyQuery": [] } ]
+      }
+    }
+  },
+  "securityDefinitions": {
+    "apikeyQuery": {
+      "type": "apiKey",
+      "name": "code",
+      "in": "query"
+    }
+  }
+}

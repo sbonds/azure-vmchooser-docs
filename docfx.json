@@ -17,6 +17,7 @@
       {
         "files": [
           "api/**.yml",
+          "api/**.json",
           "api/index.md"
         ]
       },
