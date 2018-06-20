@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\api",
-    "\\obj\\.cache",
-    "\\obj\\.cache\\build",
-    "\\src"
+    "\\apidoc",
+    "\\src",
+    "\\vmchooser"
   ],
-  "SelectedNode": "\\index.md",
+  "SelectedNode": "\\diskchooser",
   "PreviewInSolutionExplorer": false
 }

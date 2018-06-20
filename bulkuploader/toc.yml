@@ -1,2 +1,8 @@
 - name: Introduction
   href: index.md
+- name: Input File
+  href: inputfile.md
+- name: BulkUploader Interface
+  href: interface.md
+- name: Tips & Tricks
+  href: tipsandtricks.md

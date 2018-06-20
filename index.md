@@ -15,3 +15,9 @@ The data is aggregated from various public sources. In essence the main source o
 This information is consolidated into [reference data](https://github.com/kvaes/azure-vmchooser-database/tree/master/compute), and that data is combined with the pricing data on a daily basis to keep the database up-to-date.
 
 
+# GDPR
+The only data VMchooser stores is the following ;
+* Application Insights tracks the usage of the APIs and stores this data for 30 days.
+* The name of you virtual machine is not used in any API.
+All is forgotten after 30 days.
+
