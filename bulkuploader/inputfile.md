@@ -27,6 +27,8 @@ The CSV file will contain the following columns
 | SAPS2T | No | -127 to ... or Empty | Filter on the known 2-tier SAPS benchmark results, where the value is the minimum you require. |
 | SAPS3T | No | -127 to ... or Empty | Filter on the known 2-tier SAPS benchmark results, where the value is the minimum you require. |
 | SISLA | No | Yes/No | Do you need a Single Instance SLA for this machine? If yes, then Premium disks will be used for the OS and the data volume. |
+| OVERRIDEDISKTYPE | No | All/premiumssd/standardssd/standardhdd | Do you want to force a given disk type? Note : If you select SISLA as Yes, then this value will be ignored. |
+
 
 # Common Errors
 * When using a vCenter export, the memory stated is in MB and not in GB. (Here BulkUploader will prompt you with a pop-up to state that it intervened/changed the value accordingly.)
