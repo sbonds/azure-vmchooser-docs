@@ -31,6 +31,6 @@ The CSV file will contain the following columns
 # Common Errors
 * When using a vCenter export, the memory stated is in MB and not in GB. (Here BulkUploader will prompt you with a pop-up to state that it intervened/changed the value accordingly.)
 * Don't be too restrictive! Options are great, but that does not mean that you need to be specific for every column.
-  * Example : Asking for an SSD machine that should be burstable will not render any results.
+  * Example : Asking for an SSD capable machine that should not be burstable will not render any results.
 * CSV stands for "comma-seperated values". So the values should be seperated by commas. Again, due to the fact that this was a common error, BulkUploader auto-detects the seperator.
  
