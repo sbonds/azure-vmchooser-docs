@@ -22,6 +22,7 @@ The CSV file will contain the following columns
 | Peak Memory Usage (%) | Yes | 0-100 | The ability to rightsize your Memory.  Formule : (Memory * X) / 100  |
 | Currency | Yes | EUR/USD/... | Select the currency for the pricing. |
 | Contract | Yes | PAYG/RI1Y/RI3Y | Select the contract form you want. |
+| OS | No | linux/windows/sql-standard/sql-enterprise | Select to included OS you want. |
 | Burstable | Yes | Yes/No/All | Should the VM be burstable? Either restrict via "Yes" or "No", or just say "All" if you want all possible options. |
 | SAPHANA | No | Yes/No/Empty | Does the VM need to support SAP HANA? |
 | SAPS2T | No | -127 to ... or Empty | Filter on the known 2-tier SAPS benchmark results, where the value is the minimum you require. |

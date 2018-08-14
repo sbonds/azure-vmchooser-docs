@@ -56,7 +56,7 @@
 | Filter Name | Unit | Description |
 | ------ | :--: | ----------: |
 | Contract | Type | The contract type you want the pricing for. |
-| OS | Type | The OS you want PAYG pricing for. Linux will just use the raw VM price. Where windows will include a PAYG license for windows. |
+| OS | Type | The OS you want PAYG pricing for. Linux will just use the raw VM price. Where windows will include a PAYG license for windows. It's also possible to choose to have the SQL Standard & Enterprise licenses included (on top of a Windows OS). |
 | Peak CPU Usage | 0-100 | This value will be used for rightsizing of the amount of cores. Formule : (Cores * X) / 100 |
 | Peak Memory Usage | 0-100 | This value will be used for rightsizing of the amount of cores. Formule : (Memory * X) / 100 |
 
