@@ -24,7 +24,7 @@ The CSV file will contain the following columns
 | Contract | Yes | PAYG/RI1Y/RI3Y | Select the contract form you want. |
 | OS | No | linux/windows/sql-standard/sql-enterprise | Select to included OS you want. |
 | Burstable | Yes | Yes/No/All | Should the VM be burstable? Either restrict via "Yes" or "No", or just say "All" if you want all possible options. |
-| SAPHANA | No | Yes/No/Empty | Does the VM need to support SAP HANA? |
+| SAPHANA | No | Yes or All | Does the VM need to support SAP HANA? Note : Putting anything else than Yes will revert back to All.|
 | SAPS2T | No | -127 to ... or Empty | Filter on the known 2-tier SAPS benchmark results, where the value is the minimum you require. |
 | SAPS3T | No | -127 to ... or Empty | Filter on the known 2-tier SAPS benchmark results, where the value is the minimum you require. |
 | SISLA | No | Yes/No | Do you need a Single Instance SLA for this machine? If yes, then Premium disks will be used for the OS and the data volume. |
