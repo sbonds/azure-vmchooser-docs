@@ -40,6 +40,8 @@
 | Burstable | Yes/No/All | Should the VM be of the [burstable](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/b-series-burstable) kind? |
 | Isolated | Yes/No/All | Do you want a VM that is isolated (dedicated hardware)? |
 | Constrained | Yes/No/All | Should the VM be able to reduce the core count to improve licensing cost? |
+| GPU | Yes/No/All | Should the VM support GPU cards? |
+| Infiniband | Yes/No/All | Should the VM be backed by Infiniband? |
 
 
 # SAP
