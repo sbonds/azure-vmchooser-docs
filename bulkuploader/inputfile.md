@@ -30,6 +30,8 @@ The CSV file will contain the following columns
 | SISLA | No | Yes/No | Do you need a Single Instance SLA for this machine? If yes, then Premium disks will be used for the OS and the data volume. |
 | OVERRIDEDISKTYPE | No | All/premiumssd/standardssd/standardhdd | Do you want to force a given disk type? Note : If you select SISLA as Yes, then this value will be ignored. |
 | OSDISK | No | 0 to ... | Do you want to specify the OS disk size (in GB)?|
+| GPU | Yes | Yes/No/All | Should the VM support GPUs? Either restrict via "Yes" or "No", or just say "All" if you want all possible options. |
+| INFINIBAND | Yes | Yes/No/All | Should the VM be backed by Infiniband? Either restrict via "Yes" or "No", or just say "All" if you want all possible options. |
 
 
 # Common Errors
