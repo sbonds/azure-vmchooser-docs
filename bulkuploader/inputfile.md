@@ -29,7 +29,7 @@ The CSV file will contain the following columns
 | SAPS3T | No | -127 to ... or Empty | Filter on the known 2-tier SAPS benchmark results, where the value is the minimum you require. |
 | SISLA | No | Yes/No | Do you need a Single Instance SLA for this machine? If yes, then Premium disks will be used for the OS and the data volume. |
 | OVERRIDEDISKTYPE | No | All/premiumssd/standardssd/standardhdd | Do you want to force a given disk type? Note : If you select SISLA as Yes, then this value will be ignored. |
-| OSDISK | No | 0 to ... | Do you want to specify the OS disk size (in GB)?|
+| OSDISK | No | 1 to ... | Do you want to specify the OS disk size (in GB)?|
 | GPU | Yes | Yes/No/All | Should the VM support GPUs? Either restrict via "Yes" or "No", or just say "All" if you want all possible options. |
 | INFINIBAND | Yes | Yes/No/All | Should the VM be backed by Infiniband? Either restrict via "Yes" or "No", or just say "All" if you want all possible options. |
 
@@ -39,4 +39,5 @@ The CSV file will contain the following columns
 * Don't be too restrictive! Options are great, but that does not mean that you need to be specific for every column.
   * Example : Asking for an SSD capable machine that should not be burstable will not render any results.
 * CSV stands for "comma-seperated values". So the values should be seperated by commas. Again, due to the fact that this was a common error, BulkUploader auto-detects the seperator.
+* If you do not need a field (and it's optional), remove it from the sheet, or enter the minimum value to avoid unwanted filtering.
  
