@@ -11,3 +11,4 @@ As a result, you'll get info from all the relevant VMchooser modules ;
   * The **OS disk** will be provided accordingly to the disk type
   * The best config for the **data disks** will calculated (if needed).
 * **VMoptimizer** : for the best match, you'll be provided with all contract options 
+* **Backup Sizing** : get insights in the Azure backup costs

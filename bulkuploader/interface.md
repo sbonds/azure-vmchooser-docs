@@ -3,6 +3,8 @@
 ## Uploading
 After having prepped your [CSV file](bulkuploader/inputfile.html), you can now "feed" it to BulkUploader. Click on the upload zone down below to start browsing, or drop your file in there.
 
+Aside from the CSV file, you can also leverage the exports of **Azure Migrate**!
+
 ## Follow-Up
 Once you've provided BulkUploader with your input file, it'll start loading the virtual machines. You'll see that the counters behind "Virtual Machines" will start being populated. The logic used here is that the first number indicates the amount of VMs that were loaded, and the second one the total that should be loaded. The difference between the two numbers should be regarded as the "work in progress" for BulkUploader.
 

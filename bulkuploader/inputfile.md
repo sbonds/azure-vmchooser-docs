@@ -30,8 +30,12 @@ The CSV file will contain the following columns
 | SISLA | No | Yes/No | Do you need a Single Instance SLA for this machine? If yes, then Premium disks will be used for the OS and the data volume. |
 | OVERRIDEDISKTYPE | No | All/premiumssd/standardssd/standardhdd | Do you want to force a given disk type? Note : If you select SISLA as Yes, then this value will be ignored. |
 | OSDISK | No | 1 to ... | Do you want to specify the OS disk size (in GB)?|
-| GPU | Yes | Yes/No/All | Should the VM support GPUs? Either restrict via "Yes" or "No", or just say "All" if you want all possible options. |
-| INFINIBAND | Yes | Yes/No/All | Should the VM be backed by Infiniband? Either restrict via "Yes" or "No", or just say "All" if you want all possible options. |
+| GPU | No | Yes/No/All | Should the VM support GPUs? Either restrict via "Yes" or "No", or just say "All" if you want all possible options. |
+| INFINIBAND | No | Yes/No/All | Should the VM be backed by Infiniband? Either restrict via "Yes" or "No", or just say "All" if you want all possible options. |
+| RETENTIONPOINTS | No | 0 to ... | (backup sizing) How many retention points do you want to use? (Default: 0 = No backup sizing calculated) |
+| CHURN | No | 1 to ... | (backup sizing) What is the daily change rate (%) you want to incorporate? (Default: 2 = Low change rate) |
+| COMPRESSIOn | No | 1 to ... | (backup sizing) What is the compression (%) you want to take into account? (Default: 30) |
+| RESILIENCY | No | lrs/grs | (backup sizing) What resiliency do you want to take into account? (Default: lrs) |
 
 
 # Common Errors
