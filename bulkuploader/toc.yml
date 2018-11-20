@@ -1,7 +1,9 @@
 - name: Introduction
   href: index.md
-- name: Input File
+- name: Input File - CSV
   href: inputfile.md
+- name: Input File - Azure Migrate
+  href: azuremigrate.md
 - name: BulkUploader Interface
   href: interface.md
 - name: Tips & Tricks
