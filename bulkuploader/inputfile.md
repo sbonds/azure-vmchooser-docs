@@ -14,8 +14,8 @@ The CSV file will contain the following columns
 | Memory (GB) | Yes | 0 to ... | What is the minimum # of memory (in GB!) you need. |
 | SSD [Yes/No] | Yes | Yes/No/All | Should the machine be SSD capable? Either restrict via "Yes" or "No", or just say "All" if you want all possible options. |
 | NICs | Yes | 0 to ... | The minimum # of NICs you need. |
-| Max Disk Size (TB) | No | 0 to ... | The minimum size of your data volume (in TB!). If you want a disk of 32GB, you select 0.032 as the required minimum value. |
-| Data Disk Size (GB) | No | 0 to ... | The expected size of the data volume (in GB!). If you want a disk of 32GB, you select 32 as the required minimum value. |
+| Max Disk Size (TB) | No | 0 to ... | The minimum size of your data volume (in TB!). If you want a disk of 32GB, you select 0.032 as the required minimum value. (Default: 0) |
+| Data Disk Size (GB) | No | 0 to ... | The expected size of the data volume (in GB!). If you want a disk of 32GB, you select 32 as the required minimum value. If this value is set, it'll take precedence over the 'Max Disk Size (TB)' field.  |
 | IOPS | Yes | 0 to ... | The minimum # of IOPS you need from your VM. |
 | Throughput (MB/s) | Yes | 0 to ... | The minium # of throughput (in MB/s) you need from your VM. |
 | Min Temp Disk Size (GB) | Yes | 0 to ... | The minium temp disk size (in GB). |
