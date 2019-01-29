@@ -1,6 +1,6 @@
 # Input File
 
-At the top of the BulkUploader you can see [a link to the "Sample CSC File"](http://vmchooser.com/vmchooser.csv) that you can use as a starting template.
+At the top of the BulkUploader you can see [a link to the "Sample CSV File"](https://www.vmchooser.com/vmchooser.csv) that you can use as a starting template.
 
 
 # Columns
