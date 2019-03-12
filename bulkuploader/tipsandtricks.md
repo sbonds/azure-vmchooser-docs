@@ -6,3 +6,8 @@
 * Do note that there are impossible combinations. If you select burstable and SAP, then you know you won't get any results...
 * If you do not care about the region, then try out a few regions... You might find cost optimizations by doing this. A common example here is that North Europe is a tad cheaper than West Europe.
 * Use VMoptimizer to find the sweet spots to either go PAYG or buy your windows license (AHUB!). But also to see if snoozing would out perform reserved instances in terms of costs.
+
+# Gothas
+
+* BulkUploader will assume that 
+  * if the OS disk is bigger than the requested data disk size, the data can be stored on the OS disk
