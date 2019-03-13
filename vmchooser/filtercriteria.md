@@ -9,7 +9,8 @@
 | ------ | :--: | ----------: |
 | Minimum # Cores | # | The minimum amount of cores that is required for this VM. |
 | Minimum Memory | GB | The minimum of memory size that is required for this VM. |
-| Minimum performance level | ACU | The minimum of [ACU](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/acu) that is expected for the VM. |
+| Minimum performance level in Azure Compute Unit| ACU | The minimum of [ACU](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/acu) that is expected for the VM. |
+| Minimum performance level in DataBricks Unit| DBU | The minimum of [DBU](https://azure.microsoft.com/en-us/pricing/details/databricks/) that is expected for the VM. |
 
 
 # Storage
@@ -42,6 +43,7 @@
 | Constrained | Yes/No/All | Should the VM be able to reduce the core count to improve licensing cost? |
 | GPU | Yes/No/All | Should the VM support GPU cards? |
 | Infiniband | Yes/No/All | Should the VM be backed by Infiniband? |
+| SGX | Yes/No/All | Should the VM be SGX enabled? (confidential compute)|
 
 
 # SAP
