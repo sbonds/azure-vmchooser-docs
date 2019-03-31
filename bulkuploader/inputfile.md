@@ -11,6 +11,8 @@ The CSV file will contain the following columns
 | VM Name  | Yes | Free format | This is so that you can identity the VM. This information is not sent to any API. |
 | Region | Yes | [Slug field from GetRegions](https://vmchooser.azure-api.net/dev-v2/api/GetRegions) | The region where you want to deploy the VM. |
 | Cores | Yes | 0 to ... | What is the minimum # of cores you need. |
+| ACU | No | 0 to ... | What is the minimum # of ACU (Azure Compute Unit) you expect? |
+| DBU | No | 0 to ... | What is the minimum # of DBU (DataBrick Unit) you expect? |
 | Memory (GB) | Yes | 0 to ... | What is the minimum # of memory (in GB!) you need. |
 | SSD [Yes/No] | Yes | Yes/No/All | Should the machine be SSD capable? Either restrict via "Yes" or "No", or just say "All" if you want all possible options. |
 | NICs | Yes | 0 to ... | The minimum # of NICs you need. |
