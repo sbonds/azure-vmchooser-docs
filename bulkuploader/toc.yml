@@ -4,6 +4,8 @@
   href: inputfile.md
 - name: Input File - Azure Migrate
   href: azuremigrate.md
+- name: Input File - RV Tools
+  href: rvtools.md
 - name: BulkUploader Interface
   href: interface.md
 - name: Tips & Tricks
