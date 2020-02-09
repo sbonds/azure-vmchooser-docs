@@ -1,3 +1,2 @@
-FROM kyma/docker-nginx
-ADD _site/ /var/www
-CMD 'nginx'
+FROM nginx
+COPY _site/ /usr/share/nginx/html
