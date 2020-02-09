@@ -42,7 +42,7 @@ stages:
     - bash: |
         find ./
       displayName: Find
-      workingDirectory: $(Build.SourcesDirectory)/
+      workingDirectory: $(Build.BuildDirectory)/
     - task: Docker@2
       displayName: Build and Push
       inputs:
