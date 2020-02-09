@@ -1,0 +1,5 @@
+replicaCount: 1
+appVersion: #{Build.BuildId}#
+image:
+  repository: vmchooserregistry.azurecr.io/vmchooser/docs
+  pullPolicy: IfNotPresent
