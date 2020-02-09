@@ -39,11 +39,6 @@ stages:
       inputs:
         command: login
         containerRegistry: vmchooserregistry
-    - bash: |
-        pwd
-        find ./
-      displayName: Find
-      workingDirectory: ../vmchooserdocs
     - task: Docker@2
       displayName: Build and Push
       inputs:
@@ -77,11 +72,11 @@ stages:
         targetFiles: |
           **/Chart.yaml
     - bash: |
-        helm package ./vmchooserfrontend/
+        helm package ./vmchooserdocs/
       displayName: Package Helm Chart
       workingDirectory: $(Build.Repository.LocalPath)/helm/
     - bash: |
-        az acr helm push ./vmchooserfrontend*.tgz
+        az acr helm push ./vmchooserdocs*.tgz
       displayName: Push Helm Chart to ACR Repo
       workingDirectory: $(Build.Repository.LocalPath)/helm/
     - publish: $(Build.SourcesDirectory)/helm
@@ -116,7 +111,7 @@ stages:
               displayName: 'Replace tokens in vmchooserdocs.values.yaml files'
               inputs:
                 targetFiles: |
-                  $(Pipeline.Workspace)/deployvmchooserdocs/vmchooserfrontend.values.yaml
+                  $(Pipeline.Workspace)/deployvmchooserdocs/vmchooserdocs.values.yaml
             - bash: |
                 az login --service-principal -u "$(ARMCLIENTID)" -p "$(ARMCLIENTSECRET)" --tenant "$(armtenantid)"
                 az account set -s "$(armsubscriptionid)"
@@ -126,7 +121,7 @@ stages:
                 helm repo update
                 helm search repo vmchooserdocs
                 chmod +x $(Pipeline.Workspace)/deployvmchooserdocs/*.sh
-                bash -x $(Pipeline.Workspace)/deployvmchooserdocs/discoveranddeploy.sh "vmchooser" "dev" "default" "3.0.$(Build.BuildId)" "vmchooserregistry/vmchooserfrontenddocs" "vmchooserdocs" "$(Pipeline.Workspace)/deployvmchooserdocs/vmchooserdocs.values.yaml"
+                bash -x $(Pipeline.Workspace)/deployvmchooserdocs/discoveranddeploy.sh "vmchooser" "dev" "default" "3.0.$(Build.BuildId)" "vmchooserregistry/vmchooserdocs" "vmchooserdocs" "$(Pipeline.Workspace)/deployvmchooserdocs/vmchooserdocs.values.yaml"
               displayName: Discover and Deploy Chart to all Clusters with appropriate tags
               workingDirectory: $(Build.Repository.LocalPath)/
 - stage: DeployHelmChartPrd
