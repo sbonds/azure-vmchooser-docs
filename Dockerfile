@@ -1,3 +1,3 @@
 FROM kyma/docker-nginx
-ADD public/ /var/www
+ADD _site/ /var/www
 CMD 'nginx'

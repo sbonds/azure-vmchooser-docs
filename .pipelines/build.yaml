@@ -23,7 +23,7 @@ stages:
         docfx docfx.json
       displayName: Docfx
       workingDirectory: $(Build.Repository.LocalPath)/
-    - publish: $(Build.SourcesDirectory)/_site
+    - publish: $(Build.SourcesDirectory)/
       artifact: vmchooserdocs
 - stage: BuildContainerImage
   displayName: Build & Push Container Image
