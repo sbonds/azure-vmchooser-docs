@@ -48,7 +48,6 @@ stages:
           $(Build.BuildNumber)
           $(Build.BuildId)
           latest
-      workingDirectory: $(Pipeline.Workspace)/vmchooserdocs/
 - stage: BuildHelmChart
   displayName: Update & Push Helm Chart
   jobs: 
